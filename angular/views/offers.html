@@ -1,0 +1,23 @@
+<ul>
+	<!--ovo se ispise za svaku ponudu koju imamo u trnutnim ponudama naslov opis kratki gde mozete dodati svoj komentar ako zelite i ispod procitati dosadasnje komentare-->
+	<li ng-repeat='offer in offers | orderBy:"title"'>
+		<h2>{{offer.title}}</h2>
+		<p>{{chapter.summary}}</p>
+			<a href="#/offer/{{offer.id}}">
+				{{offer.comments.length}}
+				<span ng-show='offer.comments.length == 1'> comment</span>
+				<span ng-hide='offer.comments.length == 1'> comments</span>
+			</a>
+			<!--ispis komentara-->
+			<a href="#/addComment/{{offer.id}}">Add comment</a>
+		</p>
+		<ul class="coments" ng-show="offer.id==selectedOfferId">
+			<li ng-repeat='comment in offer.comments | orderBy:"id"'>
+				<div>#{{$index}}</div>
+				<div><a href ng-click='deleteComment(comment.id)'>Delete comment</a></div>
+				<p>{{comment.content}}</p>
+			</li>
+		</ul>
+
+	</li>
+</ul>

@@ -1,0 +1,10 @@
+<form name='addComment'>
+	<label for='commentContent'>Comment:</label>
+	<!--ovde se kaze koji model ce se koristiti(model pristupa bazi) da bi se dobili podaci. Zahvaljujuci modelima podaci se lakse dele izmedju view-a i controlera-->
+	<!--ovo se zove data binding gde se navodi model-->
+	<textarea id='commentContent' ng-model='comment.content'></textarea>
+	<!--odustajanje od komentara-->
+	<button ng-click='cancel()'>Cancel</button>
+	<!--dodavanje komentara-->
+	<button ng-click='createComment()' ng-disabled='!comment.content'>Add comment</button>
+</form>
