@@ -20,6 +20,10 @@ var homeConfig = function($routeProvider){
 		controller: 'deleteCommentController',
 		templateUrl: 'views/offers.html'
 	})
+	.when('/kind=:kindID&location=:locationID',{
+		controller: 'quickSearchController',
+		templateUrl: 'views/quickSearch.html'
+	})
 }
 <!--ovo exploreserbia mora biti isto kao u exploreserbia.html ng-app sto smo zadali-->
 var ExploreSerbia = angular.module('ExploreSerbia',['ngRoute']).config(homeConfig);

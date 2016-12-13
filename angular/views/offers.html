@@ -11,13 +11,8 @@
 			<!--ispis komentara-->
 			<a href="#/addComment/{{offer.id}}">Add comment</a>
 		</p>
-		<ul class="coments" ng-show="offer.id==selectedOfferId">
-			<li ng-repeat='comment in offer.comments | orderBy:"id"'>
-				<div>#{{$index}}</div>
-				<div><a href ng-click='deleteComment(comment.id)'>Delete comment</a></div>
-				<p>{{comment.content}}</p>
-			</li>
-		</ul>
 
+		<!--ovaj deo je poziv direktive i zamenjuje onaj deo zaprikaz komentara i opcija add comment tako sto je ubacen u direktivu radi bolje modularnosti koda. Kada pozivamo direktivu moramo joj zadati ove stvari koje su nam potrebne u njoj odn koje smo def u scope direktive koju pozivamo pa saljemo ovo comments='offer.comments' order-by='id' delete-comment-handler='deleteComment'-->
+		<div gb-comment-list comments="offer.comments" order-by="id" delete-comment-handler="deleteComment" show="offer.id==selectedOfferId"></div>	
 	</li>
 </ul>
