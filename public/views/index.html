@@ -1,0 +1,74 @@
+<nav class="navbar navbar-default" role = "navigation">
+        <div class="container-fluid" >
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" >
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">EXPLORESERBIA</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#" >Sign In</a></li>
+                    <li><a href="#" style="color:orange">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+</nav>
+
+
+<div class="text-center">
+<p id = "title">EXPLORESERBIA</p>
+<p id = "description">Find the best places to eat, drink, shop, hotel, nightlife or visit in any city in the Serbia.</p>
+</div>
+
+<form class="form-inline text-center">
+  <div class="form-group" id = "search_panel">
+    <input type="text" list="kinds" id = "kindQuickSearch" class="form-control" placeholder = "I'm looking for..." ng-model = "ngsearch">
+		<datalist id="kinds">
+		  <option>Hotel</option>
+		  <option>Shopping</option>
+		  <option>Coffe</option>
+		  <option>Food</option>
+		  <option>Nightlife</option>
+		</datalist>
+		<input type="text" list="locations" id = "locationQuickSearch" class="form-control" placeholder = 'Where is it?' ng-model = "nglocation" >
+		<datalist id="locations">	
+		  <option>Beograd</option>
+		  <option>Novi Sad</option>
+		  <option>Pristina</option>
+		  <option>Nis</option>
+		  <option>Kragujevas</option>
+		  <option>Subotica</option>
+		  <option>Pancevo</option>
+		  <option>Zrenjanin</option>
+		  <option>Cacak</option>
+		  <option>Kraljevo</option>
+		</datalist>
+
+	  <button type="button" id = "btnQuickSearch" ng-click="quicksearch('btnQuick')" class="btn btn-info">
+	      	<span class="glyphicon glyphicon-search"></span> Search
+	  </button>
+  </div>
+ 
+
+</form>
+<br><br><br>
+<form class="form-inline text-center">
+	<div class="row">
+		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnHotel')" ng-click="changeName($index)">Hotel</button>
+		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnShopping')">Shopping</button>
+		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnCoffe')">Coffe</button>
+		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnFood')">Food</button>
+		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnNightlife')">Nightlife</button>
+	</div>
+</form>

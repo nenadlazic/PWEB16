@@ -5,8 +5,8 @@
 var homeConfig = function($routeProvider){
 	$routeProvider
 	.when('/',{
-		controller: 'offersController',
-		templateUrl: 'views/offers.html'
+		controller: 'indexController',
+		templateUrl: 'views/index.html'
 	})
 	.when('/offer/:offerId',{
 		controller: 'offersController',
@@ -19,6 +19,10 @@ var homeConfig = function($routeProvider){
 	.when('/deleteComment/:offerId/:commentId',{
 		controller: 'deleteCommentController',
 		templateUrl: 'views/offers.html'
+	})
+	.when('/kind=:kindID&location=:locationID',{
+		controller: 'quickSearchController',
+		templateUrl: 'views/quickSearch.html'
 	})
 }
 <!--ovo exploreserbia mora biti isto kao u exploreserbia.html ng-app sto smo zadali-->

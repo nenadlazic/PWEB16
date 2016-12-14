@@ -1,0 +1,45 @@
+#search_panel {
+    margin-top: 30px;
+}
+
+#btnQuickSearch
+{
+
+  height: 45px;
+  width: 130px;
+  margin-left: 10px;
+}
+
+#kindQuickSearch
+{
+
+  height: 45px;
+  width: 300px;
+}
+
+#locationQuickSearch
+{
+
+  height: 45px;
+  width: 200px;
+}
+
+#title
+{
+  margin-top: 150px;
+  font-size: 60px;
+}
+
+#description
+{
+}
+
+.btnShortcut{
+    height:70px;
+    width:70px;
+}
+
+body{
+
+    background: rgba(76, 175, 80, 0.2);
+}
