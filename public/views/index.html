@@ -1,33 +1,9 @@
-<nav class="navbar navbar-default" role = "navigation">
-        <div class="container-fluid" >
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header" >
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">EXPLORESERBIA</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#" >Sign In</a></li>
-                    <li><a href="#" style="color:orange">Sign Up</a></li>
-                </ul>
-            </div>
-        </div>
-</nav>
-
-
+<div id = "basic">
+	<div id = "basic1">
 <div class="text-center">
-<p id = "title">EXPLORESERBIA</p>
+
+<img id = "title" ng-src="http://www.auplod.com/u/adpoul8e778.png" alt="Description" />
+
 <p id = "description">Find the best places to eat, drink, shop, hotel, nightlife or visit in any city in the Serbia.</p>
 </div>
 
@@ -58,17 +34,20 @@
 	  <button type="button" id = "btnQuickSearch" ng-click="quicksearch('btnQuick')" class="btn btn-info">
 	      	<span class="glyphicon glyphicon-search"></span> Search
 	  </button>
-  </div>
+  </div> 
  
 
 </form>
 <br><br><br>
 <form class="form-inline text-center">
 	<div class="row">
-		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnHotel')" ng-click="changeName($index)">Hotel</button>
-		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnShopping')">Shopping</button>
-		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnCoffe')">Coffe</button>
-		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnFood')">Food</button>
-		<button type="button" class = "btnShortcut" ng-click="quicksearch('btnNightlife')">Nightlife</button>
+		<button type="button" class = "btnShortcut" btn="hotel" ng-click="quicksearch('btnHotel')" ng-click="changeName($index)" ></button>
+		<button type="button" class = "btnShortcut" btn="market" ng-click="quicksearch('btnShopping')"></button>
+		<button type="button" class = "btnShortcut" btn="food" ng-click="quicksearch('btnFood')"></button>
+		<button type="button" class = "btnShortcut" btn="coffe" ng-click="quicksearch('btnCoffe')"></button>
+		<button type="button" class = "btnShortcut" btn="nightlife" ng-click="quicksearch('btnNightlife')"></button>
 	</div>
 </form>
+</div>
+
+</div>
