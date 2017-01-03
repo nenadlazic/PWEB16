@@ -13,7 +13,7 @@
 
 Route::group(['middleware' => ['web']], function (){
 
-    Route::get('/', function () {
+    /*Route::get('/', function () {
         return view('welcome');
     });
 
@@ -23,6 +23,7 @@ Route::group(['middleware' => ['web']], function (){
     Route::post('/signup', [
         'uses' => 'UserController@postSignUp', //@imefunkcije koja ce biti pozvana pri ovoj ruti
         'as' => 'signup'
-    ]);
+    ]);*/
+
 });
 
