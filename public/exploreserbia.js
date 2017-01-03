@@ -28,12 +28,12 @@ var homeConfig = function($routeProvider, $locationProvider){
 		controller: 'quickSearchController',
 		templateUrl: 'views/quickSearch.html'
 	})
-	.otherwise({
+/*	.otherwise({
 		templateUrl: app.site_url + 'views/index',
 		controller: function(){
 			window.location.href = window.location.href;
 		}
-	});
+	})*/;
     $locationProvider.html5Mode(true);
 }
 <!--ovo exploreserbia mora biti isto kao u exploreserbia.html ng-app sto smo zadali-->
