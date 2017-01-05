@@ -18,7 +18,7 @@ class UserController extends Controller
 
         $user->save(); //save to the db
 
-        return redirect()->route('/offer'); //idemo na offer stranicu
+        return redirect()->away("/offer");
     }
 
     public function postSignIn(Request $request){

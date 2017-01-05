@@ -4,10 +4,6 @@
 <!--bazom i dobavlja nam podatke-->
 var homeConfig = function($routeProvider, $locationProvider){
 	$routeProvider
-	.when('/',{
-		controller: 'indexController',
-		templateUrl: 'views/index.html'
-	})
 	.when('/offer',{
 		controller: 'indexController',
 		templateUrl: 'views/index.html'
