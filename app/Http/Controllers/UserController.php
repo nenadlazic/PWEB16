@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -22,7 +23,10 @@ class UserController extends Controller
     }
 
     public function postSignIn(Request $request){
-
+        if(Auth::attempt(['email' => $request['email'], 'password' => $request['password']])){ //ako je uspesno logovanje sa tim inicijalima vreaca true, inace false
+            return redirect()->away("/offer");
+        }
+        return redirect()->back(); //ako je neuspesno logovanje samo se vrati na tu istu stranu
     }
 
     public function offerView(){

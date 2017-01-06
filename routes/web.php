@@ -20,6 +20,11 @@ Route::post('/signup', [
     'as' => 'signup'
 ]);
 
+Route::post('/signin', [
+    'uses' => 'UserController@postSignIn', //@imefunkcije koja ce biti pozvana pri ovoj ruti
+    'as' => 'signin'
+]);
+
 Route::any('{path?}', function()
 {
     return File::get(public_path() . '/exploreserbia.php');
