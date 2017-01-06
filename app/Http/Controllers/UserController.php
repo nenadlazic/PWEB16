@@ -19,6 +19,8 @@ class UserController extends Controller
 
         $user->save(); //save to the db
 
+        Auth::login($user); //tehmicki loginujemo usera
+
         return redirect()->away("/offer");
     }
 
