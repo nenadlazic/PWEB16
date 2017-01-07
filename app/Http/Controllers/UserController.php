@@ -32,6 +32,11 @@ class UserController extends Controller
     }
 
     public function postSignIn(Request $request){
+        $this->validate($request, [
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
         if(Auth::attempt(['email' => $request['email'], 'password' => $request['password']])){ //ako je uspesno logovanje sa tim inicijalima vreaca true, inace false
             return redirect()->away("/offer");
         }
