@@ -13,7 +13,7 @@ class CreateAllTables extends Migration
      */
     public function up()
     {
-        Schema::create('tourist', function (Blueprint $table) {
+        Schema::create('tourists', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
             $table->string('phone');
@@ -25,7 +25,7 @@ class CreateAllTables extends Migration
             $table->rememberToken();
         });
 
-        Schema::create('advertisement', function (Blueprint $table) {
+        Schema::create('advertisements', function (Blueprint $table) {
             $table->increments('id');
             $table->string('location');
             $table->string('name');
@@ -34,7 +34,7 @@ class CreateAllTables extends Migration
             $table->rememberToken();
         });
 
-        Schema::create('adv_manager', function (Blueprint $table) {
+        Schema::create('adv_managers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
             $table->string('phone');
@@ -47,7 +47,7 @@ class CreateAllTables extends Migration
             $table->rememberToken();
         });
 
-        Schema::create('offer', function (Blueprint $table) {
+        Schema::create('offers', function (Blueprint $table) {
             $table->integer('advert_id');
 //            $table->foreign('advert_id')->references('id')->on('advertisement');
             $table->string('description');
@@ -55,7 +55,7 @@ class CreateAllTables extends Migration
             $table->rememberToken();
         });
 
-        Schema::create('reservation', function (Blueprint $table) {
+        Schema::create('reservations', function (Blueprint $table) {
             $table->integer('advert_id');
             $table->integer('tourist_id');
 //            $table->foreign('advert_id')->references('id')->on('advertisement');
@@ -67,7 +67,7 @@ class CreateAllTables extends Migration
             $table->rememberToken();
         });
 
-        Schema::create('comment', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->integer('advert_id');
             $table->integer('tourist_id');
 //            $table->foreign('advert_id')->references('id')->on('advertisement');
@@ -87,11 +87,11 @@ class CreateAllTables extends Migration
      */
     public function down()
     {
-        Schema::drop('tourist');
-        Schema::drop('advertisement');
-        Schema::drop('adv_manager');
-        Schema::drop('offer');
-        Schema::drop('reservation');
-        Schema::drop('comment');
+        Schema::drop('tourists');
+        Schema::drop('advertisements');
+        Schema::drop('adv_managers');
+        Schema::drop('offers');
+        Schema::drop('reservations');
+        Schema::drop('comments');
     }
 }
