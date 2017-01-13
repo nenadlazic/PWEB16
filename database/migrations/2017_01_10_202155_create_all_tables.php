@@ -68,13 +68,17 @@ class CreateAllTables extends Migration
         });
 
         Schema::create('comments', function (Blueprint $table) {
-            $table->integer('advert_id');
+/*            $table->integer('advert_id');
             $table->integer('tourist_id');
 //            $table->foreign('advert_id')->references('id')->on('advertisement');
 //            $table->foreign('tourist_id')->references('id')->on('tourist');
             $table->string('content');
             $table->integer('rating');
-            $table->boolean('checked');
+            $table->boolean('checked');*/
+            $table->increments('id');
+    
+            $table->string('text');
+            $table->string('author');           
             $table->timestamps();
             $table->rememberToken();
         });
