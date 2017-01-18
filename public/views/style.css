@@ -123,6 +123,10 @@ span[navcolor = "color"]{
   color: white;
 }
 
+#navi:hover { 
+    background-color:rgba(255, 255, 255, 0.1);
+}
+
 #facebook
 {
 

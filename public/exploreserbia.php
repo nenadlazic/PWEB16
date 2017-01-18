@@ -41,12 +41,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" ><span navcolor = "color">Home</span></a></li>
-                    <li><a href="#" ><span navcolor = "color">Offers</span></a></li>
-                    <li><a href="#" ><span navcolor = "color">Contact</span></a></li>
-                    <li><a href="#" ><span navcolor = "color">About</span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-user" style="color:orange"></span> <span style="color:orange"> Sign Up</span></a></li>
-		       		<li><a href="#"><span class="glyphicon glyphicon-log-in" navcolor = "color"></span> <span navcolor = "color">Login</span></a></li>
+                    <li><a id="navi" href="#/" ><span navcolor = "color">Home</span></a></li>
+                    <li><a id="navi" href="#/offers" ><span navcolor = "color">Offers</span></a></li>
+                    <li><a id="navi" href="#/contact" ><span navcolor = "color">Contact</span></a></li>
+                    <li><a id="navi" href="#/about" ><span navcolor = "color">About</span></a></li>
+                    <li><a id="navi" href="#/signup"><span class="glyphicon glyphicon-user" style="color:orange"></span> <span style="color:orange"> Sign Up</span></a></li>
+		       		<li><a id="navi" href="#"><span class="glyphicon glyphicon-log-in" navcolor = "color"></span> <span navcolor = "color">Login</span></a></li>
                 </ul>
             </div>
         </div>
