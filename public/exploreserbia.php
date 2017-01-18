@@ -35,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" style = "color:white" href="#">EXPLORESERBIA</a>
+                <a class="navbar-brand" style = "color:white" href="#/">EXPLORESERBIA</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
