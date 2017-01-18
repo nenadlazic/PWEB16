@@ -45,6 +45,7 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
 button[btn="hotel"]{
   background-image: url("../pictures/hotel.png")
 }
@@ -70,8 +71,8 @@ button[btn="nightlife"]{
   background-image: url("../pictures/belgrade.jpg");
 }
 #basic1{
-  background-color: rgba(0, 0, 200, 0.7);
-  padding-bottom: 110px;
+  background-color: rgba(50, 50, 150, 0.6);
+  height: 550px;
   margin-top: -20px;
 }
 
@@ -83,11 +84,6 @@ div[show = "divQSPerview"]{
 }
 
 footer{
-  position: absolute;
-  height: 130px;
-  right: 0;
-  bottom: -100px;
-  left: 0;
   background-color: rgb(32, 48, 63);
   text-align: center;
   border-style: solid;
@@ -119,16 +115,7 @@ table[tfont = "font"]
 {
   background-color: rgb(32, 48, 63);
 }
+
 span[navcolor = "color"]{
   color: white;
-}
-
-#navi:hover { 
-    background-color:rgba(255, 255, 255, 0.1);
-}
-
-#facebook
-{
-
-  background-image: url("../pictures/facebook.png");
 }
