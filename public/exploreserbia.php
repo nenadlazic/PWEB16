@@ -5,7 +5,7 @@
 		<title>Explore Serbia</title>
 		<!--ukljucujemo angularjs biblioteku-->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-route.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-route.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -39,24 +39,21 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#" ><span navcolor = "color">Home</span></a></li>
                     <li><a href="#" ><span navcolor = "color">Offers</span></a></li>
                     <li><a href="#" ><span navcolor = "color">Contact</span></a></li>
                     <li><a href="#" ><span navcolor = "color">About</span></a></li>
-                    <li><a href="#" ><span navcolor = "color">Sign In</span></a></li>
-                    <li><a href="#" style="color:orange">Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user" style="color:orange"></span> <span style="color:orange"> Sign Up</span></a></li>
+		       		<li><a href="#"><span class="glyphicon glyphicon-log-in" navcolor = "color"></span> <span navcolor = "color">Login</span></a></li>
                 </ul>
             </div>
         </div>
-</nav>
-
+		</nav>
 
 		<!--ovde ce se dodavati viewovi tokom rada aplikacije zavisno od rute na kojoj se nalazimo ng-view prikazuje odgovarajuci view i sve se to dinamicki menja-->
 		<div ng-view>
-
-			<img src="../pictures/belgrade.jpg">
 
 		</div>
 
@@ -84,7 +81,7 @@
 					</tr>
 
 			  		<tr>
-			  		<td>Review</td>
+			  		<td>Offers</td>
 					</tr>
 
 					<tr>
