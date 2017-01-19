@@ -58,104 +58,104 @@
 		</nav>
 
 		<!--ovde ce se dodavati viewovi tokom rada aplikacije zavisno od rute na kojoj se nalazimo ng-view prikazuje odgovarajuci view i sve se to dinamicki menja-->
-		<div ng-view>
+		<div ng-view id="container">
 
 		</div>
 
 
+		<footer id="footer">
+			<div class="container-fluid" >
+				<div class="row text-center">
+					<div class="col-md-1"></div>
+					<div class="col-md-3"  fdiv = "naslovkt">
+
+						<table tfont = "font" align="center">
+					  		<tbody>
+					  		<tr>
+					  		<td name = "kt">SERVICES</td>
+					  		</tr>
+
+					  		<tr>
+					  		<td>Search</td>
+							</tr>
+
+					  		<tr>
+					  		<td>Reservations</td>
+							</tr>
+
+					  		<tr>
+					  		<td>Offers</td>
+							</tr>
+
+							<tr>
+					  		<td>Rate</td>
+							</tr>
+
+						</tbody></table>
+
+					</div>
+					<div class="col-md-4" fdiv = "naslovkt">
+						<table tfont = "font" align="center">
+					  		<tbody>
+					  		<tr>
+					  			<td name = "kt" colspan="2">CONTACT</td>
+					  		</tr>
+					  		<tr><td>Address:</td>
+							<td>Kumanovska 14, Vračar</td>
+							</tr><tr><td>Phone:</td>
+							<td>011/3086 979,</td>
+							</tr><tr><td>
+							</td><td>011/3449 322</td>
+							</tr><tr><td>Fax:</td>
+							<td>011/3830 972</td>
+							</tr><tr><td>E-mail:</td>
+							<td><a href="mailto:techsupport@rezervisi-rs.site">techsupport@rezervisi-rs.site</a></td>
+							</tr><tr><td></td>
+							</tr></tbody>
+						</table>
+					</div>
+					<div class="col-md-3" fdiv = "naslovkt">
+
+						<table tfont = "font" align="center" style = "margin-bottom: 8px">
+					  		<tbody>
+
+					  		<tr>
+					  		<td name = "kt">INFO</td>
+					  		</tr>
+
+					  		<tr>
+					  		<td>Follow us</td>
+							</tr>
+
+						</tbody></table>
 
 
-<footer>
-	<div class="container-fluid" >
-		<div class="row text-center">
-			<div class="col-md-1"></div>
-			<div class="col-md-3"  fdiv = "naslovkt">
+					  			<a href="http://www.googleplus.com">
+					  				<img ng-src="https://s25.postimg.org/ms3vidi3j/googleplus.png" width="25" height="25">
+					  			</a>
 
-				<table tfont = "font" align="center">
-			  		<tbody>
-			  		<tr>
-			  		<td name = "kt">SERVICES</td>
-			  		</tr>
+					  			<a href="http://www.facebook.com">
+					  				<img ng-src="https://s25.postimg.org/4o0uxqkez/facebook.png" width="25" height="25">
+					  			</a>
 
-			  		<tr>
-			  		<td>Search</td>
-					</tr>
+					  			<a href="http://www.instagram.com">
+					  				<img ng-src="https://s25.postimg.org/53c4qr6cf/linkedin.png" width="25" height="25">
+					  			</a>
 
-			  		<tr>
-			  		<td>Reservations</td>
-					</tr>
 
-			  		<tr>
-			  		<td>Offers</td>
-					</tr>
+					  			<a href="http://www.twitter.com">
+					  				<img ng-src="https://s25.postimg.org/b5jrh8usf/twitter.png" width="25" height="25">
+					  			</a>
 
-					<tr>
-			  		<td>Rate</td>
-					</tr>
+					  			<a href="http://www.youtube.com">
+					  				<img ng-src="https://s25.postimg.org/t9ms1vsgv/youtube.png" width="25" height="25">
+					  			</a>
 
-				</tbody></table>
-
+					</div>
+					
+					<div class="col-md-1"></div>
+				</div>
 			</div>
-			<div class="col-md-4" fdiv = "naslovkt">
-				<table tfont = "font" align="center">
-			  		<tbody>
-			  		<tr>
-			  			<td name = "kt" colspan="2">CONTACT</td>
-			  		</tr>
-			  		<tr><td>Address:</td>
-					<td>Kumanovska 14, Vračar</td>
-					</tr><tr><td>Phone:</td>
-					<td>011/3086 979,</td>
-					</tr><tr><td>
-					</td><td>011/3449 322</td>
-					</tr><tr><td>Fax:</td>
-					<td>011/3830 972</td>
-					</tr><tr><td>E-mail:</td>
-					<td><a href="mailto:techsupport@rezervisi-rs.site">eserbia@gmail.com</a></td>
-					</tr><tr><td></td>
-					</tr></tbody>
-				</table>
-			</div>
-			<div class="col-md-3" fdiv = "naslovkt">
-
-				<table tfont = "font" align="center" style = "margin-bottom: 8px">
-			  		<tbody>
-
-			  		<tr>
-			  		<td name = "kt">INFO</td>
-			  		</tr>
-
-			  		<tr>
-			  		<td>Follow us</td>
-					</tr>
-
-				</tbody></table>
-
-
-			  			<a href="http://www.googleplus.com">
-			  				<img ng-src="https://s25.postimg.org/ms3vidi3j/googleplus.png" width="25" height="25">
-			  			</a>
-
-			  			<a href="http://www.facebook.com">
-			  				<img ng-src="https://s25.postimg.org/4o0uxqkez/facebook.png" width="25" height="25">
-			  			</a>
-
-			  			<a href="http://www.instagram.com">
-			  				<img ng-src="https://s25.postimg.org/53c4qr6cf/linkedin.png" width="25" height="25">
-			  			</a>
-
-
-			  			<a href="http://www.twitter.com">
-			  				<img ng-src="https://s25.postimg.org/b5jrh8usf/twitter.png" width="25" height="25">
-			  			</a>
-
-			  			<a href="http://www.youtube.com">
-			  				<img ng-src="https://s25.postimg.org/t9ms1vsgv/youtube.png" width="25" height="25">
-			  			</a>
-
-			</div>
-			
-			<div class="col-md-1"></div>
-		</div>
-	</div>
-</footer>
+		</footer>
+	</body>
+</html>
