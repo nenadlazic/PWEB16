@@ -63,7 +63,7 @@
 		</div>
 
 
-		<footer id="footer">
+		<footer>
 			<div class="container-fluid" >
 				<div class="row text-center">
 					<div class="col-md-1"></div>

@@ -162,3 +162,22 @@ span[navcolor = "color"]{
    height:60px;   /* Height of the footer */
    background:#6cf;
 }
+
+#allteam {
+    align:center;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+#profileImage {
+  border-style: solid;
+  border-radius: 125px;
+  border-top-color: rgb(32, 48, 63);
+}
+
+#contactteam{
+  padding-top: 10px;
+  text-align: center;
+}
