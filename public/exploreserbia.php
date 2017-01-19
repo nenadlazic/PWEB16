@@ -111,7 +111,7 @@
 					</tr><tr><td>Fax:</td>
 					<td>011/3830 972</td>
 					</tr><tr><td>E-mail:</td>
-					<td><a href="mailto:eserbia@gmail.com">eserbia@gmail.com</a></td>
+					<td><a href="mailto:techsupport@rezervisi-rs.site">eserbia@gmail.com</a></td>
 					</tr><tr><td></td>
 					</tr></tbody>
 				</table>
