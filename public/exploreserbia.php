@@ -38,9 +38,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" style = "color:white" href="#/">EXPLORESERBIA</a>
+                <a class="navbar-brand" style = "color:white" href="#/">
+                	<img src = "https://s25.postimg.org/8v2skznq7/small_logo.png" width = "150" height = "40" style = "margin-top:-10px">
+                </a>
             </div>
-
+            
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav navbar-right">
