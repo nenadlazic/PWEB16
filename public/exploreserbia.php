@@ -12,6 +12,7 @@
 		<!--ukljucujemo ,,controller" zapocetnu stranicu -->
 		<script type="text/javascript" src="exploreserbia.js"></script>
 
+		<script type="text/javascript" src="controller/loginController.js"></script>
 		<script type="text/javascript" src="controller/offersController.js"></script>
 		<script type="text/javascript" src="controller/indexController.js"></script>
 		<script type="text/javascript" src="controller/deleteCommentController.js"></script>
@@ -46,7 +47,7 @@
                     <li><a id="navi" href="#/contact" ><span navcolor = "color">Contact</span></a></li>
                     <li><a id="navi" href="#/about" ><span navcolor = "color">About</span></a></li>
                     <li><a id="navi" href="#/signup"><span class="glyphicon glyphicon-user" style="color:orange"></span> <span style="color:orange"> Sign Up</span></a></li>
-		       		<li><a id="navi" href="#"><span class="glyphicon glyphicon-log-in" navcolor = "color"></span> <span navcolor = "color">Login</span></a></li>
+		       		<li><a id="navi" href="#/login"><span class="glyphicon glyphicon-log-in" navcolor = "color"></span> <span navcolor = "color">Login</span></a></li>
                 </ul>
             </div>
         </div>

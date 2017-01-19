@@ -16,6 +16,10 @@ var homeConfig = function($routeProvider){
 		controller: 'contactController',
 		templateUrl: 'views/contact.html'
 	})
+	.when('/login',{
+		controller: 'loginController',
+		templateUrl: 'views/login.html'
+	})
 	.when('/signup',{
 		controller: 'signupController',
 		templateUrl: 'views/signup.html'
