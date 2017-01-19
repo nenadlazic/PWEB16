@@ -181,3 +181,16 @@ span[navcolor = "color"]{
   padding-top: 10px;
   text-align: center;
 }
+
+#qsview{
+  background-color: rgba(32, 48, 63, 0.4);
+  border-radius: 10px;
+  position: relative;
+}
+
+#btn_offers
+{
+  position: absolute;
+    right: 10px;
+    bottom: 10px;
+}

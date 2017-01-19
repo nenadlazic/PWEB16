@@ -3,9 +3,12 @@
 		<div class="col-md-2 col-xs-0">Levi deo stranice</div>
 			<div class="col-md-8 col-xs-12"show = "divQSPerview">
 				<ul ng-repeat='offer in offers | orderBy:"title"'> 
-					<li ng-repeat='t in offer'>
-						<h4>{{t}}</h4>
-					</li>
+					<div  class="row" id = "qsview">
+						<li ng-repeat='t in offer'>
+							<h4>{{t}}</h4>
+						</li>
+						 <span id = "sbtn_offres"><input id = "btn_offers"type="submit" class="btn btn-primary" value="Reservation"></span>
+					</div>
 				</ul>
 			</div>
 		<div class="col-md-2 col-xs-0">Desni deo stranice</div>
