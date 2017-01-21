@@ -1,3 +1,0 @@
-ExploreSerbia.service('indexModel',function(){
-	
-});
