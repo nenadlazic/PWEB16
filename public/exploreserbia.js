@@ -28,6 +28,10 @@ var homeConfig = function($routeProvider){
 		controller: 'signupController',
 		templateUrl: 'views/signup.html'
 	})
+	.when('/offers',{
+		controller: 'offersController',
+		templateUrl: 'views/offers.html'
+	})
 	.when('/offer/:offerId',{
 		controller: 'offersController',
 		templateUrl: 'views/offers.html'
