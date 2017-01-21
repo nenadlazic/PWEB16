@@ -114,6 +114,7 @@ table[tfont = "font"]
 #nav-placeholde
 {
   background-color: rgb(32, 48, 63);
+  position: relative;
 }
 
 span[navcolor = "color"]{
@@ -185,12 +186,24 @@ span[navcolor = "color"]{
 #qsview{
   background-color: rgba(32, 48, 63, 0.4);
   border-radius: 10px;
+  padding: 10px;
   position: relative;
 }
 
 #btn_offers
 {
   position: absolute;
-    right: 10px;
-    bottom: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: 120px;
+}
+
+#offerStyle{
+
+  color: black;
+}
+
+#rightoffer
+{
+  background-color: red;
 }

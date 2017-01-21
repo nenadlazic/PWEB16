@@ -79,6 +79,19 @@ ExploreSerbia.controller('quickSearchController',
 			}
 
 			//na scope lepimo gde ima poklapanja u pretrazi
-			$scope.offers = tmpOffres;
+			
+			var response = '{"offers":[{"id":1, "name":"Metropola", "location":"Belgrade, Kralja Aleksandra 123", "rating":"3"},{"id":2, "name":"Hayat", "location":"Belgrade, Tosin bunar 123", "rating":"5"},{"id":3, "name":"Neki", "location":"Belgrade, Kralja Aleksandra 123", "rating":"3"}]}';
+			var json_string_1='{"x":5, "y":10, "a":[1,2,3]}';
+			var parse_response = JSON.parse(response);
 
+			for(let i = 0; i < parse_response.offers.length; i++)
+			{
+				console.log(parse_response.offers[i].id);
+			}
+
+			$scope.offers = parse_response.offers;
+
+			$scope.init = function () {
+			   console.log("dadada");
+			};
 	});

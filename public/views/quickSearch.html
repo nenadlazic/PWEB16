@@ -1,16 +1,22 @@
 <div class="container center">
 	<div class="row">
-		<div class="col-md-2 col-xs-0">Levi deo stranice</div>
+		<div class="col-md-2 col-xs-0">
+			Levi deo stranice
+		</div>
 			<div class="col-md-8 col-xs-12"show = "divQSPerview">
 				<ul ng-repeat='offer in offers | orderBy:"title"'> 
 					<div  class="row" id = "qsview">
-						<li ng-repeat='t in offer'>
-							<h4>{{t}}</h4>
-						</li>
-						 <span id = "sbtn_offres"><input id = "btn_offers"type="submit" class="btn btn-primary" value="Reservation"></span>
+						<h4 >
+							<p id = "offerStyle">NAME: {{offer.name}}</p>
+							<p id = "offerStyle">LOCATION: {{offer.location}}</p>
+							<p id = "offerStyle">RATING: {{offer.rating}}</p>	
+							<input id = "btn_offers"type="submit" class="btn btn-primary" value="Details" ng-click="init()">
+						</h4>
 					</div>
 				</ul>
 			</div>
-		<div class="col-md-2 col-xs-0">Desni deo stranice</div>
+		<div class="col-md-2 col-xs-0">
+			Desni deo stranice
+		</div>
 	</div>
 </div>
