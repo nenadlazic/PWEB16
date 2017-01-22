@@ -21,6 +21,7 @@
 		<script type="text/javascript" src="controller/quickSearchController.js"></script>
 		<script type="text/javascript" src="controller/signupController.js"></script>
 		<script type="text/javascript" src="controller/termsController.js"></script>
+		<script type="text/javascript" src="controller/sendsuccessfulyController.js"></script>
 		<script type="text/javascript" src="controller/contactController.js"></script>
 		<script type="text/javascript" src="model/commentModel.js"></script>
 		<script type="text/javascript" src="model/offerModel.js"></script>

@@ -42,6 +42,10 @@ var homeConfig = function($routeProvider){
 		controller: 'quickSearchController',
 		templateUrl: 'views/quickSearch.html'
 	})
+	.when('/sendsuccessfuly',{
+		controller: 'sendsuccessfulyController',
+		templateUrl: 'views/sendsuccessfuly.html'
+	})
 }
 <!--ovo exploreserbia mora biti isto kao u exploreserbia.html ng-app sto smo zadali-->
 var ExploreSerbia = angular.module('ExploreSerbia',['ngRoute']).config(homeConfig);
