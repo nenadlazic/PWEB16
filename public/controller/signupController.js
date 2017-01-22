@@ -2,9 +2,34 @@ ExploreSerbia.controller('signupController',
 	function($scope,$http,$location,$routeParams)
 	{
 
+		 $scope.readURL = function () {
+
+  			for(var i=0; i<2; i++){
+  				
+			 	var inputss = document.getElementById("imgInp");
+
+
+			        if (inputss.files && inputss.files[0]) {
+
+			            var reader = new FileReader();
+			            
+			            reader.onload = function (e) {	
+			            	$scope.showImage = e.target.result;
+			            } 
+			            reader.readAsDataURL(inputss.files[0]);
+			        }
+			    }
+		    }
+		    
+
 		$scope.registration = function()
 		{
 			console.log("radiii");
+
+
+
+			var image = $scope.regImage;
+			console.log(image);
 
 			var name = $scope.regFirstName;
 			console.log(name);

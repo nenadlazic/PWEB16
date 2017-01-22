@@ -1,3 +1,4 @@
+<?php include_once("php/connect_to_mysql.php"); ?>
 <!DOCTYPE html>
 <!--pravimo prvi korak u angularu definisemo controler i vidimo kako se koristi-->
 <html ng-app="ExploreSerbia">
@@ -20,6 +21,7 @@
 		<script type="text/javascript" src="controller/quickSearchController.js"></script>
 		<script type="text/javascript" src="controller/signupController.js"></script>
 		<script type="text/javascript" src="controller/termsController.js"></script>
+		<script type="text/javascript" src="controller/contactController.js"></script>
 		<script type="text/javascript" src="model/commentModel.js"></script>
 		<script type="text/javascript" src="model/offerModel.js"></script>
 		<script type="text/javascript" src="model/indexModel.js"></script>
