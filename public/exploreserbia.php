@@ -30,6 +30,7 @@
 		<script type="text/javascript" src="model/offerModel.js"></script>
 		<script type="text/javascript" src="model/indexModel.js"></script>
 		<script type="text/javascript" src="model/quickSearchModel.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="pictures/favicon.ico"/>
 		<link rel="stylesheet" href="views/style.css">
 
 	</head>
