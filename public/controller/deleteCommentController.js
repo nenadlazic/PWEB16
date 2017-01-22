@@ -7,6 +7,6 @@ ExploreSerbia.controller('deleteCommentController',
 		
 		console.log("brisanje");
 		commentModel.deleteComment(offerId, $routeParams.commentId);
-		$location.path('/offer/'+offerId);
+		$location.path('/offer='+offerId);
 	}
 );

@@ -1,48 +1,33 @@
 ExploreSerbia.controller('indexController',
-	function($scope,$location,$routeParams, indexModel)
-	{
-		$scope.quicksearch = function($id)
-		{
-			console.log($id);
-			if($id == "btnQuick")
-			{
-				var inputText = $scope.ngsearch.toLowerCase().trim();
-				var inputLocation = $scope.nglocation.toLowerCase().trim();
-			}
+    function($scope, $rootScope, $location, $routeParams, indexModel, $http) {
+        $scope.quicksearch = function($id) {
+            var inputText;
+            var inputLocation;
 
-			else if($id == "btnHotel")
-			{
-			console.log($id);
-				var inputText = new String("hotel");
-				var inputLocation = $scope.nglocation.toLowerCase().trim();
-			}
-			else if($id == "btnShopping")
-			{
-			console.log($id);
-				var inputText = new String("shopping");
-				var inputLocation = $scope.nglocation.toLowerCase().trim();
-			}
-			else if($id == "btnFood")
-			{
-			console.log($id);
-				var inputText = new String("food");
-				var inputLocation = $scope.nglocation.toLowerCase().trim();
-			}
-			else if($id == "btnDrink")
-			{
-			console.log($id);
-				var inputText = new String("drink");
-				var inputLocation = $scope.nglocation.toLowerCase().trim();
-			}
-			else if($id == "btnNightlife")
-			{
-			console.log($id);
-				var inputText = new String("nightlife");
-				var inputLocation = $scope.nglocation.toLowerCase().trim();
-			}
+            if ($id == "btnQuick") {
+                inputText = $scope.ngsearch.toLowerCase().trim();
+                inputLocation = $scope.nglocation.toLowerCase().trim();
+            } else if ($id == "btnHotel") {
+                inputText = "hotel";
+                inputLocation = $scope.nglocation.toLowerCase().trim();
+            } else if ($id == "btnShopping") {
+                inputText = "shopping";
+                inputLocation = $scope.nglocation.toLowerCase().trim();
+            } else if ($id == "btnFood") {
+                inputText = "food";
+                inputLocation = $scope.nglocation.toLowerCase().trim();
+            } else if ($id == "btnDrink") {
+                inputText = "drink";
+                inputLocation = $scope.nglocation.toLowerCase().trim();
+            } else if ($id == "btnNightlife") {
+                inputText = "nightlife";
+                inputLocation = $scope.nglocation.toLowerCase().trim();
+            }
 
-			$location.path('/kind='+inputText+'&location='+inputLocation);
-		}
+            $rootScope.inputText = inputText;
+            $rootScope.inputLocation = inputLocation;
 
+            $location.path('/kind=' + inputText + '&location=' + inputLocation);
+        }
 
-	});
+    });
