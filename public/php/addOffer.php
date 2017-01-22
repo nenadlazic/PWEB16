@@ -21,7 +21,7 @@
     exit();
   }
 
-  $sql = "SELECT id FROM advertisements WHERE location LIKE '$location' AND name LIKE '$name' limit 1"
+  $sql = "SELECT id FROM advertisements WHERE location LIKE '$location' AND name LIKE '$name' limit 1";
   $res=mysqli_query($myConnection, $sql);
   if($res == false){
     $jsonData = '{"added":false}';
