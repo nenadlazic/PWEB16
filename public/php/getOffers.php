@@ -10,16 +10,21 @@
     on o.advert_id = a.id WHERE a.location='$location' AND a.tip='$type'";
   $res=mysqli_query($myConnection, $sql);
   $count = mysqli_num_rows($res);
-  $jsonData = "";
+  
+  $jsonData = '{"offers":[';
+  
   if($count>0){
     while($row=mysqli_fetch_row($res)){
       $jsonData .= '{"id":"' . $row[0] . '",'
         . '"name":"' . $row[1] . '",'
-        . '"description":"' . $row[2] . '"}';
+        . '"description":"' . $row[2] . '"},';
     }
-  }else{
+    $jsonData = substr(trim($jsonData), 0, -1);
+    $jsonData .= ']}';
+   }
+   else{
     $jsonData = '{"found":false}';
-  }
+   }
 
   echo $jsonData;
 
