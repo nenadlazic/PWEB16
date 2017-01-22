@@ -1,5 +1,3 @@
-
-
 var homeConfig = function($routeProvider){
 	$routeProvider
 	.when('/',{
@@ -41,6 +39,22 @@ var homeConfig = function($routeProvider){
 	.when('/kind=:kindID&location=:locationID',{
 		controller: 'quickSearchController',
 		templateUrl: 'views/quickSearch.html'
+	})
+	.when('/profile',{
+		controller: 'indexController',
+		templateUrl: 'views/index.html'
+	})
+	.when('/sendsuccessfuly',{
+		controller: 'sendsuccessfulyController',
+		templateUrl: 'views/sendsuccessfuly.html'
+	})
+	.when('/userprofile',{
+		controller: 'profileController',
+		templateUrl: 'views/profile.html'
+	})
+	.when('/addOffer',{
+		controller: 'addOfferController',
+		templateUrl: 'views/addOffer.html'
 	})
 }
 <!--ovo exploreserbia mora biti isto kao u exploreserbia.html ng-app sto smo zadali-->

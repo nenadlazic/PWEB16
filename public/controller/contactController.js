@@ -31,7 +31,7 @@ ExploreSerbia.controller('contactController',
             	error = 1;
         	}
 
-
+        	$location.path('/sendsuccessfuly');
 
 			if (error == 0) {
 	            var request = $http({
@@ -53,7 +53,7 @@ ExploreSerbia.controller('contactController',
             }, function(result_rejected) {
                 console.log(result_rejected);
             });
-        }
+       }
 			
 		}
 	});
