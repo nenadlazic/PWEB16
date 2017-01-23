@@ -1,53 +1,55 @@
-<div id = "basic">
-	<div id = "basic1">
-<div class="text-center">
+<div id="basic">
+    <div id="basic1">
+        <div class="text-center">
 
-<img id = "title" ng-src="https://s25.postimg.org/6yyx1wv6n/logo.png" alt="Description" />
+            <img id="title" ng-src="https://s25.postimg.org/6yyx1wv6n/logo.png" alt="Description" />
 
-<p id = "description">Find the best places to eat, drink, shop, hotel, nightlife or visit in any city in the Serbia.</p>
-</div>
+            <p id="description">Find the best places to eat, drink, shop, hotel, nightlife or visit in any city in the Serbia.</p>
+        </div>
 
-<form class="form-inline text-center">
-  <div class="form-group" id = "search_panel">
-    <input type="text" list="kinds" id = "kindQuickSearch" class="form-control" placeholder = "I'm looking for..." ng-model = "ngsearch">
-		<datalist id="kinds">
-		  <option>Hotel</option>
-		  <option>Shopping</option>
-		  <option>Coffe</option>
-		  <option>Food</option>
-		  <option>Nightlife</option>
-		</datalist>
-		<input type="text" list="locations" id = "locationQuickSearch" class="form-control" placeholder = 'Where is it?' ng-model = "nglocation" >
-		<datalist id="locations">	
-		  <option>Beograd</option>
-		  <option>Novi Sad</option>
-		  <option>Pristina</option>
-		  <option>Nis</option>
-		  <option>Kragujevas</option>
-		  <option>Subotica</option>
-		  <option>Pancevo</option>
-		  <option>Zrenjanin</option>
-		  <option>Cacak</option>
-		  <option>Kraljevo</option>
-		</datalist>
+        <form class="form-inline text-center">
+            <div class="form-group" id="search_panel">
+                <input type="text" list="kinds" id="kindQuickSearch" class="form-control" placeholder="I'm looking for..." ng-model="ngsearch">
+                <datalist id="kinds">
+                    <option>Hotel</option>
+                    <option>Shopping</option>
+                    <option>Coffe</option>
+                    <option>Food</option>
+                    <option>Nightlife</option>
+                </datalist>
+                <input type="text" list="locations" id="locationQuickSearch" class="form-control" placeholder='Where is it?' ng-model="nglocation">
+                <datalist id="locations">
+                    <option>Beograd</option>
+                    <option>Novi Sad</option>
+                    <option>Pristina</option>
+                    <option>Nis</option>
+                    <option>Kragujevas</option>
+                    <option>Subotica</option>
+                    <option>Pancevo</option>
+                    <option>Zrenjanin</option>
+                    <option>Cacak</option>
+                    <option>Kraljevo</option>
+                </datalist>
 
-	  <button type="button" id = "btnQuickSearch" ng-click="quicksearch('btnQuick')" class="btn btn-info">
-	      	<span class="glyphicon glyphicon-search"></span> Search
-	  </button>
-  </div> 
- 
+                <button type="button" id="btnQuickSearch" ng-click="quicksearch('btnQuick')" class="btn btn-info">
+                    <span class="glyphicon glyphicon-search"></span> Search
+                </button>
+            </div>
 
-</form>
-<br><br><br>
-<form class="form-inline text-center">
-	<div class="row">
-		<button type="button" class = "btnShortcut" btn="hotel" ng-click="quicksearch('btnHotel')" ng-click="changeName($index)" ></button>
-		<button type="button" class = "btnShortcut" btn="market" ng-click="quicksearch('btnShopping')"></button>
-		<button type="button" class = "btnShortcut" btn="food" ng-click="quicksearch('btnFood')"></button>
-		<button type="button" class = "btnShortcut" btn="coffe" ng-click="quicksearch('btnCoffe')"></button>
-		<button type="button" class = "btnShortcut" btn="nightlife" ng-click="quicksearch('btnNightlife')"></button>
-	</div>
-</form>
-</div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <form class="form-inline text-center">
+            <div class="row">
+                <button type="button" class="btnShortcut" btn="hotel" ng-click="quicksearch('btnHotel')" ng-click="changeName($index)"></button>
+                <button type="button" class="btnShortcut" btn="market" ng-click="quicksearch('btnShopping')"></button>
+                <button type="button" class="btnShortcut" btn="food" ng-click="quicksearch('btnFood')"></button>
+                <button type="button" class="btnShortcut" btn="coffe" ng-click="quicksearch('btnCoffe')"></button>
+                <button type="button" class="btnShortcut" btn="nightlife" ng-click="quicksearch('btnNightlife')"></button>
+            </div>
+        </form>
+    </div>
+
 
 </div>

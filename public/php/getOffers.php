@@ -6,7 +6,7 @@
 	$location = $args->city_name;
 	$type = $args->looking_for;
 
-  $sql = "SELECT a.id, a.name, o.description FROM offers o join advertisements a
+  $sql = "SELECT o.id, a.name, o.description FROM offers o join advertisements a
     on o.advert_id = a.id WHERE a.location='$location' AND a.tip='$type'";
   $res=mysqli_query($myConnection, $sql);
   $count = mysqli_num_rows($res);
@@ -26,6 +26,6 @@
     $jsonData = '{"found":false}';
    }
 
-  echo $jsonData;
+   echo $jsonData;
 
 ?>

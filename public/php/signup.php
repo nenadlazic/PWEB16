@@ -7,8 +7,8 @@
 	$phone = $args->phone;
 	$fname = $args->first_name;
 	$lname = $args->last_name;
-	$userType = $args->user_type;
-	if($userType === 'individual'){
+	$userType = $args->profile_type;
+	if(strcmp($userType, "individual") == 0 || strcmp($userType, "Individual") == 0 ){
 		$sql = "INSERT INTO tourists (email, password, phone, first_name, last_name, points) VALUES('$email', '$password', '$phone', '$fname', '$lname', 0)";
 		$query = mysqli_query($myConnection, $sql) or die(mysqli_error($myConnection));
 	}else{

@@ -1,35 +1,41 @@
 <?php
 	include_once("connect_to_mysql.php");
 
+	session_start();
+
 	$args = json_decode(file_get_contents("php://input"));
 
 	$email = $args->email;
-	$password = $args->pass;
+	$password = $args->password;
 
-	$res=mysqli_query($myConnection, "SELECT password FROM tourists WHERE email='$email'");
+	$json_response = "";
+
+	$res=mysqli_query($myConnection, "SELECT id, password FROM tourists WHERE email='$email'");
 	$row=mysqli_fetch_array($res);
 	$count = mysqli_num_rows($res);
 
   if( $count == 1 && $row['password']==$password )
   {
-  		$json_response = '{"loggedin":true}';
+  		$_SESSION['email'] = $email;
+  		$json_response = '{"loggedin":true,"id":"' . $row[0] . '"}';
 			echo $json_response;
 			exit();
   }
   else {
-  		$json_response = '{"loggedin":false}';
+  		$json_response = '{"loggedin":false,"id":"' . $row[0] . '"}';
   }
 
-	$sql = "SELECT password FROM adv_managers WHERE email='$email'";
-	$res = mysqli_query($myConnection, $sql);
-	$row = mysqli_fetch_row($res);
+	$sql = "SELECT id, password FROM adv_managers WHERE email='$email'";
+	$res = mysqli_query($myConnection, $sql) or die(mysqli_error($myConnection));
+	$row = mysqli_fetch_array($res);
 
-	if($row['password']==$password)
+	if($row[1]==$password)
   {
-  		$json_response = '{"loggedin":true}';
+  		$_SESSION['email'] = $email;
+  		$json_response = '{"loggedin":true,"id":"' . $row[0] . '"}';
   }
   else {
-  		$json_response = '{"loggedin":false}';
+  		$json_response = '{"loggedin":false,"id":"' . $row[0] . '"}';
   }
 
 	echo $json_response;

@@ -1,16 +1,15 @@
 <div class="container">
       <div class="row">
       <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-           <A href="edit.html" >Edit Profile</A>
+           <A href="#/editProfile" >Edit Profile</A>
        <br>
-<p class=" text-info">May 05,2014,03:00 pm </p>
       </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
    
    
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">Sheena Shrestha</h3>
+              <h3 class="panel-title" ng-model = "firstName" ng-model = "lastName">{{firstName}} {{lastName}}</h3>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -23,35 +22,36 @@
                   <table class="table table-user-information">
                     <tbody>
                       <tr>
-                        <td>Department:</td>
-                        <td>Programming</td>
+                        <td>First name:</td>
+                        <td ng-model = "firstName">{{firstName}}</td>
                       </tr>
                       <tr>
-                        <td>Hire date:</td>
-                        <td>06/23/2013</td>
+                        <td>Last name:</td>
+                        <td ng-model = "lastName">{{lastName}}</td>
                       </tr>
                       <tr>
-                        <td>Date of Birth</td>
-                        <td>01/24/1988</td>
+                        <td>User type:</td>
+                        <td ng-model = "userType">{{userType}}</td>
                       </tr>
                    
                          <tr>
                              <tr>
-                        <td>Gender</td>
-                        <td>Female</td>
+                        <td>Email:</td>
+                        <td ng-model = "email">{{email}}</td>
                       </tr>
                         <tr>
-                        <td>Home Address</td>
-                        <td>Kathmandu,Nepal</td>
+                        <td>Phone number</td>
+                        <td ng-model = "phoneNumber">{{phoneNumber}}</td>
                       </tr>
                       <tr>
-                        <td>Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                        <tr>
+                        <td>Registration date:</td>
+                        <td ng-model = "regDate">{{regDate}}</td>
                       </tr>
-                        <td>Phone Number</td>
-                        <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
-                        </td>
-                           
+                       <tr>
+                        <tr>
+                        <td>Points:</td>
+                        <td ng-model = "points">{{points}}</td>
                       </tr>
                      
                     </tbody>
@@ -61,14 +61,14 @@
               </div>
             </div>
                  <div class="panel-footer">
-                  <a href="#/addOffer" class="btn btn-sm btn-primary">Add offer</a>
+                 <a href="#/reservations" class="btn btn-sm btn-primary">Reservations</a>
+                  <a href="#/addOffer" class="btn btn-sm btn-primary" ng-show="btnAddOfferDisabled">Add offer</a>
                         <a href="#/contact" data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
                         <span class="pull-right">
                             
-                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#/" data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
                         </span>
                     </div>
-            
           </div>
         </div>
       </div>

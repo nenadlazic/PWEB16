@@ -18,6 +18,30 @@
 				<p>{{comment.content}}</p>
 			</li>
 		</ul>
-
+		
 	</li>
 </ul>
+
+<?php
+	$offers = "";
+	$sql = "SELECT * FROM offers";
+	$query = mysqli_query($myConnection, $sql) or die('Error');
+	while($row = mysqli_fetch_array($query)){
+		$content = $row["description"];
+		
+		$content = stripslashes($content);
+		$content = htmlentities($content);
+		$content = nl2br($content);
+		
+		$offers .= '<div>
+				' . $content 
+			. '</div>
+			<div>
+				<div>Like</div>
+				<div>Comment</div>
+			</div>'; 
+	}
+	
+	echo $offers;
+
+?>

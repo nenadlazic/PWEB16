@@ -31,12 +31,12 @@ ExploreSerbia.controller('contactController',
             	error = 1;
         	}
 
-        	$location.path('/sendsuccessfuly');
+        	
 
 			if (error == 0) {
 	            var request = $http({
                 method: "post",
-                url:  "../php/contactUs.php",
+                url:  "/php/contactUs.php",
                 data: {
                 	name: $scope.contactName,
                 	email: $scope.contactEmail,
@@ -45,13 +45,14 @@ ExploreSerbia.controller('contactController',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             }).then(function(result_resolved) {
                 if (result_resolved.data.sent == true) {
-                    alert("Email or name correct");
-                    $location.path('/');
+                    
+                    $location.path('/sendsuccessfuly');
                 } else {
                     alert("Email or name incorrect format");
                 }
             }, function(result_rejected) {
                 console.log(result_rejected);
+                alert("Email not send");
             });
        }
 			

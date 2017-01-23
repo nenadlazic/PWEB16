@@ -86,7 +86,7 @@ ExploreSerbia.controller('signupController',
             /* Check whether the HTTP Request is Successfull or not. */
             request.success(function (data) {
                 $scope.message = "From PHP file : "+data;
-				$location.path('/');
+				$location.path('/login');
 
             });
         }

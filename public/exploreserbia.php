@@ -1,4 +1,9 @@
+<?php include_once("php/connect_to_mysql.php"); 
 
+	/*if(!isset($_SESSION['email']))
+		header('Location: exploreserbia.php');
+	*/
+?>
 <!DOCTYPE html>
 <!--pravimo prvi korak u angularu definisemo controler i vidimo kako se koristi-->
 <html ng-app="ExploreSerbia">
@@ -15,16 +20,18 @@
 
 		<script type="text/javascript" src="controller/loginController.js"></script>
 		<script type="text/javascript" src="controller/offersController.js"></script>
+		<script type="text/javascript" src="controller/offfersController.js"></script>
 		<script type="text/javascript" src="controller/indexController.js"></script>
 		<script type="text/javascript" src="controller/deleteCommentController.js"></script>
 		<script type="text/javascript" src="controller/addCommentController.js"></script>
 		<script type="text/javascript" src="controller/quickSearchController.js"></script>
 		<script type="text/javascript" src="controller/signupController.js"></script>
-		<script type="text/javascript" src="controller/profileController.js"></script>
 		<script type="text/javascript" src="controller/termsController.js"></script>
-		<script type="text/javascript" src="controller/addOfferController.js"></script>
-		<script type="text/javascript" src="controller/sendsuccessfulyController.js"></script>
+		<script type="text/javascript" src="controller/profileController.js"></script>
+		<script type="text/javascript" src="controller/editProfileController.js"></script>
+		<script type="text/javascript" src="controller/reservationsController.js"></script>
 		<script type="text/javascript" src="controller/contactController.js"></script>
+		<script type="text/javascript" src="controller/sendsuccessfulyController.js"></script>
 		<script type="text/javascript" src="controller/addOfferController.js"></script>
 		<script type="text/javascript" src="model/commentModel.js"></script>
 		<script type="text/javascript" src="model/offerModel.js"></script>
@@ -34,7 +41,7 @@
 		<link rel="stylesheet" href="views/style.css">
 
 	</head>
-	<body>
+	<body class="Site">
 
 		<nav class="navbar navbar-default" id = "nav-placeholde" role = "navigation">
         <div class="container-fluid" >
@@ -57,7 +64,7 @@
 		</nav>
 
 		<!--ovde ce se dodavati viewovi tokom rada aplikacije zavisno od rute na kojoj se nalazimo ng-view prikazuje odgovarajuci view i sve se to dinamicki menja-->
-		<div ng-view id="container">
+		<div ng-view id="container" class="Site-content">
 
 		</div>
 

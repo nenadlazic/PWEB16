@@ -12,8 +12,12 @@ ExploreSerbia.controller('loginController',
             $rootScope.loggedOut = false;
         }
         $scope.login = function() {
+$rootScope.loginUserEmail = $scope.email;
             var email = $scope.email;
             var password = $scope.password;
+            
+            console.log(password);console.log(email);
+            
             var remember = $scope.rememberMe;
             if (!(remember == true))
                 remember = false;
@@ -29,14 +33,19 @@ ExploreSerbia.controller('loginController',
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }
             }).then(function(result_resolved) {
+                console.log(result_resolved);
                 if (result_resolved.data.loggedin == true) {
+
+$rootScope.currentUserId = result_resolved.data.id;
                     login();
                     $location.path("/profile");
                 } else {
+console.log("prihvatio else");
                     alert("Email or password incorrect");
                 }
             }, function(result_rejected) {
-                console.log(result_rejected);
+console.log("nije prihvatio");                
+console.log(result_rejected);
             });
         }
     });

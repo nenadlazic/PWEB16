@@ -1,7 +1,7 @@
 <?php
-  include_once("connect_to_mysql.php");
+	include_once("connect_to_mysql.php");
 
-  $args = json_decode(file_get_contents("php://input"));
+	$args = json_decode(file_get_contents("php://input"));
 
   $email = $args->email;
 

@@ -1,35 +1,35 @@
 <?php
-  include_once("connect_to_mysql.php");
+	include_once("connect_to_mysql.php");
 
-  $args = json_decode(file_get_contents("php://input"));
+	$args = json_decode(file_get_contents("php://input"));
 
-  $email = $args->email;
-  $password = $args->password;
+	$email = $args->email;
+	$password = $args->password;
   $first_name = $args->firstName;
   $last_name = $args->lastName;
   $phone = $args->phoneNumber;
   $id = $args->id;
-  $type = $args->individual;
+  $type = $args->type;
 
-  $json_response = "";
-
-  if(type == true){
-       $sql = "UPDATE tourists SET password='$password', email='$email', first_name='$first_name', last_name='$last_name', phone='$phone' WHERE id='$id'";
+  $jsonData = "";
+  
+  if($type === "individual"){
+       $sql = "UPDATE tourists SET phone='$phone', password='$password', email='$email', first_name='$first_name', last_name='$last_name' WHERE id='$id'";
        $res=mysqli_query($myConnection, $sql);
-       if($res == true){
-        $jsonData = '{"updated":true}';
-       }else{
+       if($res == false){
         $jsonData = '{"updated":false}';
+       }else{
+        $jsonData = '{"updated":true}';
        }
    }else{
-       $sql = "UPDATE adv_managers SET password='$password', email='$email', first_name='$first_name', second_name='$second_name', phone='$phone' WHERE id='$id'";
-       $res=mysqli_query($myConnection, $sql);
-       if($res == true){
-        $jsonData = '{"updated":true}';
-       }else{
+       $sql2 = "UPDATE adv_managers SET phone='$phone', password='$password', email='$email', first_name='$first_name', last_name='$last_name' WHERE id='$id'";
+       $res2=mysqli_query($myConnection, $sql2);
+       if($res2 == false){
         $jsonData = '{"updated":false}';
+       }else{
+        $jsonData = '{"updated":true}';
        }
-   }    
+   }
 
-    echo $json_response;
+    echo $jsonData;
 ?>

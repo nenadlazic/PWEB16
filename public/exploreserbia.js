@@ -24,9 +24,9 @@ var homeConfig = function($routeProvider){
 		controller: 'signupController',
 		templateUrl: 'views/signup.html'
 	})
-	.when('/offer/:offerId',{
-		controller: 'offersController',
-		templateUrl: 'views/offers.html'
+	.when('/offers',{
+		controller: 'offfersController',
+		templateUrl: 'views/offfers.html'
 	})
 	.when('/addComment/:offerId',{
 		controller:'addCommentController',
@@ -55,6 +55,14 @@ var homeConfig = function($routeProvider){
 	.when('/addOffer',{
 		controller: 'addOfferController',
 		templateUrl: 'views/addOffer.html'
+	})
+.when('/editProfile',{
+		controller: 'editProfileController',
+		templateUrl: 'views/editProfile.html'
+	})
+.when('/reservations',{
+		controller: 'reservationsController',
+		templateUrl: 'views/reservations.html'
 	})
 }
 <!--ovo exploreserbia mora biti isto kao u exploreserbia.html ng-app sto smo zadali-->
